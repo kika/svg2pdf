@@ -11,10 +11,10 @@ Supports multipage rendering. Supports SVGs with embedded SVGs and with embedded
 Parameters accepted, either as form-data parameters or JSON key/values:
 
 Name | Description | Default
-----------------------------
-`width`,`height`  | Dimensions of the output page(s) in points. If not specified, or set to  zero, then dimensions from the SVG file are taken. If there are multiple SVG files, then every page my have a different size. If these parameters are specified all pages have the same size. | `0`.
-`scalex` | Float value, scale of the width. Width of the page would be multiplied by this number. | `1.0`.
-`scaley` | Float value, scale of the height. Height of the page would be multiplied by this number. | `1.0`.
+-----|-------------|--------
+`width`,`height`  | Dimensions of the output page(s) in points. If not specified, or set to  zero, then dimensions from the SVG file are taken. If there are multiple SVG files, then every page my have a different size. If these parameters are specified all pages have the same size. | `0`
+`scalex` | Float value, scale of the width. Width of the page would be multiplied by this number. | `1.0`
+`scaley` | Float value, scale of the height. Height of the page would be multiplied by this number. | `1.0`
 `output`| Name of the fictitious "output file". Parameter that would be returned in the `Content-Disposition` header. | `output.pdf`
 
 You can supply these parameters as form inputs or as JSON file, sent as file upload, or both. You can even have multiple JSON files send among SVG pages and parameters, specified in each file would be effective starting from the page following this parameter file upload.
