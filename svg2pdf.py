@@ -1,5 +1,6 @@
 from bottle import get, post, run, request, response
 
+import timeit
 import logging
 import re
 
@@ -34,7 +35,9 @@ def process():
             if f.content_type == 'application/json':
                 doc.from_json(f)
             elif f.content_type == 'application/svg+xml':
+                t = timeit.default_timer()
                 doc.render_page(f)
+                log.info("Page render time: %f" % (timeit.default_timer() - t))
                 yield doc.flush()
             else:
                 log.warn("Non SVG/JSON input: %s -> %s" % (name, f.content_type))
