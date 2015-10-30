@@ -1,3 +1,4 @@
+#!env python
 from bottle import get, post, run, request, response
 
 import timeit
@@ -46,4 +47,4 @@ def process():
 if __name__ == '__main__':
     log.addHandler(logging.StreamHandler())
     log.setLevel(logging.DEBUG)
-    run(host='localhost', port=8001, debug=True)
+    run(host='localhost', port=8001, debug=False)
