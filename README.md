@@ -17,7 +17,7 @@ Name | Description | Default
 `scaley` | Float value, scale of the height. Height of the page would be multiplied by this number. | `1.0`
 `output`| Name of the fictitious "output file". Parameter that would be returned in the `Content-Disposition` header. | `output.pdf`
 
-You can supply these parameters as form inputs or as JSON file, sent as file upload, or both. You can even have multiple JSON files send among SVG pages and parameters, specified in each file would be effective starting from the page following this parameter file upload.
+You can supply these parameters as form inputs or as JSON file, sent as file upload, or both. You can even have multiple JSON files sent among SVG pages and parameters, specified in each file would be effective starting from the page following this parameter file upload.
 
 SVG file(s) are "attached" to the request as file uploads with type `application/svg+xml`.
 
