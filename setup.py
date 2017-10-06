@@ -8,5 +8,9 @@ setup(
     url          = "https://github.com/kika/svg2pdf",
     packages     = ['svg2pdf'],
     scripts      = ['svg2pdf.py'],
-    description  = "SVG2PDF service"
+    description  = "SVG2PDF service",
+    install_requires = [
+          "bottle"
+        , "pyaml"
+    ]
 )
